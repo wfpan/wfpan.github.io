@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta name="description" content="潘伟丰，男，浙江杭州萧山人，中共党员，浙江工商大学副教授、硕士生导师。2011年毕业于武汉大学计算机软件与理论专业，获工学博士学位（导师：李兵教授）；2018年访学美国西密歇根大学工程和应用科学学院计算机科学系（合作导师：杨子江教授）。" />
+	<meta name="keywords" content="weifeng pan, pan weifeng, 潘伟丰, 浙江工商大学, 计算机与信息工程学院, software networks, complex networks, software engineering, metrics, object oriented programming, zhejiang gongshang university" />
+	<meta name="author" content="Weifeng Pan, pan weifeng, 浙江工商大学, 计算机与信息工程学院" />
+	<link rel="stylesheet" type="text/css" href="../andreas02.css" media="screen,projection" />
+	<link rel="stylesheet" type="text/css" href="print.css" media="print" />
+	<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<title>Welcome to Weifeng Pan's Homepage, 潘伟丰, 浙江工商大学, 计算机与信息工程学院</title>
+	<base target="_blank"/>
+</head>
+
+<style type="text/css">
+	#dhtmltooltip{
+		position: absolute;
+		left: -300px;
+		width: 150px;
+		border: 1px solid black;
+		padding: 2px;
+		background-color: lightyellow;
+		visibility: hidden;
+		z-index: 100;
+		/*Remove below line to remove shadow. Below line should always appear last within this CSS*/
+		filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);
+	}
+	
+	#dhtmlpointer{
+		position:absolute;
+		left: -300px;
+		z-index: 101;
+		visibility: hidden;
+	}
+.STYLE6 {color: #1279f8;/*#2c75b4*/}
+</style>
+
+<style>
+	/*wfpan 加的*/
+	a:hover {
+		position:relative;
+		top:1px;
+		left:1px;
+		cursor:pointer;
+	}
+	.vip_del {
+		color:#1279f8;
+	}
+	.vvip_del {
+		color:#ff0000;/*#1279f8*/;
+	}
+	
+</style>
+
+<!--加入脚本区域-->
+<script>
+/***********************************************
+* 连接上显示提示信息的脚本
+* Cool DHTML tooltip script II- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var offsetfromcursorX=12 //Customize x offset of tooltip
+var offsetfromcursorY=10 //Customize y offset of tooltip
+
+var offsetdivfrompointerX=10 //Customize x offset of tooltip DIV relative to pointer image
+var offsetdivfrompointerY=14 //Customize y offset of tooltip DIV relative to pointer image. Tip: Set it to (height_of_pointer_image-1).
+
+document.write('<div id="dhtmltooltip"></div>') //write out tooltip DIV
+document.write('<img id="dhtmlpointer" src="imgs/arrow2.gif">') //write out pointer image
+
+var ie=document.all
+var ns6=document.getElementById && !document.all
+var enabletip=false
+if (ie||ns6)
+var tipobj=document.all? document.all["dhtmltooltip"] : document.getElementById? document.getElementById("dhtmltooltip") : ""
+
+var pointerobj=document.all? document.all["dhtmlpointer"] : document.getElementById? document.getElementById("dhtmlpointer") : ""
+
+function ietruebody(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function ddrivetip(thetext, thewidth, thecolor){
+if (ns6||ie){
+if (typeof thewidth!="undefined") tipobj.style.width=thewidth+"px"
+if (typeof thecolor!="undefined" && thecolor!="") tipobj.style.backgroundColor=thecolor
+tipobj.innerHTML=thetext
+enabletip=true
+return false
+}
+}
+
+function positiontip(e){
+if (enabletip){
+var nondefaultpos=false
+var curX=(ns6)?e.pageX : event.clientX+ietruebody().scrollLeft;
+var curY=(ns6)?e.pageY : event.clientY+ietruebody().scrollTop;
+//Find out how close the mouse is to the corner of the window
+var winwidth=ie&&!window.opera? ietruebody().clientWidth : window.innerWidth-20
+var winheight=ie&&!window.opera? ietruebody().clientHeight : window.innerHeight-20
+
+var rightedge=ie&&!window.opera? winwidth-event.clientX-offsetfromcursorX : winwidth-e.clientX-offsetfromcursorX
+var bottomedge=ie&&!window.opera? winheight-event.clientY-offsetfromcursorY : winheight-e.clientY-offsetfromcursorY
+
+var leftedge=(offsetfromcursorX<0)? offsetfromcursorX*(-1) : -1000
+
+//if the horizontal distance isn't enough to accomodate the width of the context menu
+if (rightedge<tipobj.offsetWidth){
+//move the horizontal position of the menu to the left by it's width
+tipobj.style.left=curX-tipobj.offsetWidth+"px"
+nondefaultpos=true
+}
+else if (curX<leftedge)
+tipobj.style.left="5px"
+else{
+//position the horizontal position of the menu where the mouse is positioned
+tipobj.style.left=curX+offsetfromcursorX-offsetdivfrompointerX+"px"
+pointerobj.style.left=curX+offsetfromcursorX+"px"
+}
+
+//same concept with the vertical position
+if (bottomedge<tipobj.offsetHeight){
+tipobj.style.top=curY-tipobj.offsetHeight-offsetfromcursorY+"px"
+nondefaultpos=true
+}
+else{
+tipobj.style.top=curY+offsetfromcursorY+offsetdivfrompointerY+"px"
+pointerobj.style.top=curY+offsetfromcursorY+"px"
+}
+tipobj.style.visibility="visible"
+if (!nondefaultpos)
+pointerobj.style.visibility="visible"
+else
+pointerobj.style.visibility="hidden"
+}
+}
+
+function hideddrivetip(){
+if (ns6||ie){
+enabletip=false
+tipobj.style.visibility="hidden"
+pointerobj.style.visibility="hidden"
+tipobj.style.left="-1000px"
+tipobj.style.backgroundColor=''
+tipobj.style.width=''
+}
+}
+
+document.onmousemove=positiontip
+
+</script>
+<!-------------->
+
+<body>
+
+<div id="container">
+	<div id="logo">
+		<h1><a href="index.html">Weifeng Pan</a></h1>
+		<p>Zhejiang Gongshang University</p>
+	</div>
+
+	<div id="navitabs">
+		<h2 class="hide">Navigation menu:</h2>
+		<a class="navitab" href="index.html">Home</a><span class="hide"> | </span>
+		<a class="navitab" href="publications.html">Publications</a><span class="hide"> | </span>
+		<a class="activenavitab" href="activities.html">Activities</a><span class="hide"> | </span>
+		<a class="navitab" href="projects.html">Projects</a><span class="hide"> | </span>
+		<a class="navitab" href="snap.html">SNAP</a>
+	</div>
+	
+	<div id="desc">
+		<h2>Special Issue</h2>
+		<p>Structure, Dynamics, and Applications of Complex Networks in Software Engineering</p>
+	</div>		
+
+	<div id="main">		
+		<h3 id="jp">Description</h3>
+		<p>Large-scale software projects are interesting examples of human-made complex systems. The complexity of these 
+			systems can be reflected both in their structures and in their development processes. Due to the wide adoption of open 
+			source practices using online infrastructures, both the software development process and the final software structure 
+			can be traced in an easy way. Thus, a large-scale data set about software projects can be obtained, making an in-depth study 
+			of software projects possible.</p>
+    <p>During the last decade, complex networks have been widely applied to analyze the topological structure and dynamics of 
+    	software projects. Many shared physics-like laws of such software projects—such as scale-free, small-world, and fractal 
+    	properties—have been revealed.</p>
+    <p>The objective of this Special Issue is to provide a comprehensive collection of cutting edge research work on the application 
+    	of complex network theory, and techniques to explore software projects. Original research articles presenting novel in-depth 
+    	fundamental research are welcomed, along with review articles discussing the current state of the art.</p>
+    <p>Potential topics include but are not limited to the following:</p>
+		<UL>
+			<LI>Analysis of software architectures from a complex network perspective
+			<LI>Models for the growth and evolution of software structures
+			<LI>Analysis of developer-user relations in open source software communities
+			<LI>Analysis of bug dependency networks
+			<LI>Network-based software metrics and their use to assist developers
+			<LI>Network-based prediction of software quality or process problems (e.g., software defects, modularity, stability, etc.)
+		</UL>
+		<p>There is a list of papers on <i>Software Networks</i> that can be referenced:</p>	
+			<OL>
+			<LI><strong>Weifeng Pan</strong>, Hua Ming, Carl K. Chang, Zijiang Yang, Dae-Kyoo Kim. 
+				<a class="STYLE6" onMouseOver="ddrivetip('Software comprehension is an important part of software maintenance. To understand a piece of large and complex software, the first problem to be solved is where to start the understanding process. Choosing to start the comprehension process from the important software elements has proven to be a practical way. Research on complex networks opens new opportunities for identifying important elements, and many approaches have been proposed. However, the software networks that existing approaches use neglect the multilayer nature of software systems. That is, nodes in the network can have different types of relationships at the same time, and each type of relationship forms a specific layer. Worse still, they mainly focus on identifying important classes, and little work has been done on quantifying package importance. In this paper, we propose an ElementRank approach to provide a ranked list of classes (or packages) for maintainers to start the comprehension process. The top-ranked classes (or packages) can be seen as the starting points for the software comprehension process at the class (or package) level. First, we introduce two kinds of multilayer software networks to describe the topological structure of software at the class level and package level, respectively. Second, we propose a weighted PageRank algorithm to calculate the weighted PageRank value of classes (or packages) in each layer of the corresponding multilayer software network. Then, we use AHP (Analytic Hierarchy Process) to weigh each layer in the corresponding multilayer software network, and further aggregate the weighted PageRank value to obtain the global weighted PageRank value for each class (or package). Finally, all the classes (or packages) are ranked according to their global weighted PageRank values in a descending order, and the top-ranked classes (or packages) can serve as the starting points for the software comprehension process at the class (or package) level. ElementRank is validated theoretically using the widely accepted Weyuker\'s criteria. Theoretical results show that the global weighted PageRank value for classes (or packages) satisfies most of Weyuker\'s properties. Furthermore, ElementRank is evaluated empirically using a set of twelve open source software systems. Through a set of experiments, we show the rank correlation between the results of ElementRank and that of the approaches in the related work, and the benefits of ElementRank are also illustrated in comparison with other approaches in the related work. Empirical results also show that ElementRank can be applied to large software systems.',500)" onMouseOut="hideddrivetip()" onClick="javascript:pageTracker._trackPageview('/outbound/article/www.plosone.org');" target="_blank">
+					ElementRank: Ranking Java Software Classes and Packages using Multilayer Complex Network-Based Approach</a>. <strong><i>IEEE Transactions on Software Engineering</i></strong>, 2019, DOI: 10.1109/TSE.2019.2946357 (<strong>SCI, JCR Q1, 软件工程顶级期刊, <span class="vvip badge">CCF A类国际期刊</span></strong>) [<a href="https://ieeexplore.ieee.org/document/8862895">PDF</a>] [<a href="https://github.com/wfpan/ElementRank_TSE2019" target="_blank">Data & Code</a>]
+			
+			<LI><strong>Weifeng Pan</strong>, Chunlai Chai. <a class="STYLE6" onMouseOver="ddrivetip('An increasing number of physical objects connected to the Internet makes it possible for smart things to access all kinds of cloud services. Mashup technology has been an effective way to the rapid IoT (Internet of Things) application development. However, the number of Mashup services (IoT applications) being so large makes how to accurately and efficiently discover the desired IoT applications become a problem. Service clustering technology can effectively facilitate service discovery, and many different approaches have been proposed. However, many of them only use semantic similarities to guide clustering operations and need the configuration of the number of clusters. Structural similarities are orthogonal to semantic similarities. But they have never been used in service clustering approaches. In this paper, we propose a novel Mashup service clustering approach based on a structural similarity and a genetic algorithm based clustering algorithm. First, it applies a two-mode graph to formally describe Mashups, Web APIs, and their relations. Second, it introduces the SimRank algorithm to quantify the structural similarity between every pair of Mashup services. Finally, it introduce a genetic algorithm based clustering algorithm to organize Mashup services into clusters and effectively determines the number of clusters. Empirical results on a real-world Mashup services data set collected from ProgrammableWeb demonstrate that our approach can efficiently cluster Mashup services without any constraints on the number of clusters, and its performance is better than other semantic metrics based Mashup service clustering approaches.',500)" onMouseOut="hideddrivetip()" onClick="javascript:pageTracker._trackPageview('/outbound/article/www.plosone.org');" target="_blank">Structure-Aware Mashup Service Clustering for Cloud-based Internet of Things Using Genetic Algorithm based Clustering Algorithm</a>. <strong><i>Future Generation Computer Systems</i></strong>, 2018, 87: 267-277.  (<strong>SCI, JCR Q1, <span class="vvip badge">中科院2区</span>, <span class="vip">CCF C类国际期刊</span></strong></strong>) [<a href="https://www.sciencedirect.com/science/article/pii/S0167739X18302097">PDF</a>]
+			
+			<LI><strong>Weifeng Pan</strong>, Bing Li, Jing Liu, Yutao Ma, Bo Hu. <a class="STYLE6" onMouseOver="ddrivetip('Statistical properties of un-weighted software networks have been extensively studied. However, software networks in their nature should be weighted. Understanding the properties enclosed in the weighted software networks can lead to better software engineering practices. In this paper, we construct a set of weighted software networks from real-world Java software systems and empirically investigate their topological properties by using weighted $k$-core decomposition. First, we investigate the static topological properties of the weighted $k$-core structure, and find that small value of the graph coreness is a property shared by many software systems, the distribution of weighted coreness follows a power law with an exponential cutoff, and weighted coreness and node degree are closely correlated with their spearman correlation coefficients larger than 0.94. Second, we analyze the evolving topological properties of the weighted $k$-core structure, including the graph coreness, size of the main core, and new members and vanishing members of the main core. Empirical results show that the graph coreness will keep relatively stable unless the system undergoes major changes, size of the main core keeps stable in its evolution, and new members or vanishing members of a main core are from or go to the shells very near the corresponding main cores. Finally, we apply the weighted $k$-core decomposition method to identify the key classes, and find that, compared with other nine approaches, our approach performs best in the whole set of subject systems according to the average ranking of the Friedman test. It can identify a majority of classes deemed important. This work could help developers to improve software understanding, propose new metrics for software measurement and evaluate the quality of the system in development.',500)" onMouseOut="hideddrivetip()" onClick="javascript:pageTracker._trackPageview('/outbound/article/www.plosone.org');" target="_blank">Analyzing the structure of Java software systems by weighted <em>k</em>-core decomposition</a>. <strong><i>Future Generation Computer Systems</i></strong>, 2018, 83: 431-444.  (<strong>SCI, JCR Q1, <span class="vvip badge">中科院2区</span>, <span class="vip">CCF C类国际期刊</span></strong></strong>) [<a href="http://www.sciencedirect.com/science/article/pii/S0167739X17320940">PDF</a>]
+			
+			<LI><strong>Weifeng Pan</strong>, Beibei Song, Kangshun Li, Kejun Zhang. <a class="STYLE6" onMouseOver="ddrivetip('Identifying key classes can help developers familiarize with a previously unknown software system. Complex network research opens new opportunities for identifying key classes, and many approaches have been proposed. However, the software network that existing approaches rely on is un-weighted and un-directed, which does not conform to the reality of a software system. Thus, how to identify key classes by using more accurate software network models and appropriate complex network theories is still a problem that has never been reported. The objective of this paper is to provide a ranked list of classes for new developers as starting points for the program comprehension process. Our approach is based on a more accurate software network and a generalized version of $k$-core decomposition in complex network research. First, we use a weighted directed software network to represent the topological structure of software at the class level, which takes into consideration both the coupling direction and coupling strength. Then, we propose a generalized $k$-core decomposition method and use it to calculate the generalized coreness of each class. Finally, we sort classes with respect to their generalized corenesses in a descending order. The top-ranked classes serve as the key class candidates. Experiments have been performed on four open-source software systems. Empirical results have shown that our approach is able to identify a majority of true key classes, with a recall larger than 64\% on the subject systems. Comparison studies with other nine static analysis based approaches have also been performed. Results show that our approach performs best in the whole set of subject systems according to the average ranking of the Friedman test. The evaluation indicates that our approach improves the effectiveness of existing approaches on identification of key classes. The key class candidates recommended by our approach can be excellent starting points for program comprehension process. Our approach is a valuable technique for developers who are aiming to gain a thorough understanding of a previously unknown software system.',500)" onMouseOut="hideddrivetip()" onClick="javascript:pageTracker._trackPageview('/outbound/article/www.plosone.org');" target="_blank">Identifying Key Classes in Object-Oriented Software using
+Generalized <em>k</em>-Core Decomposition</a>. <strong><i>Future Generation Computer Systems</i></strong>, 2018, 81: 188-202.  (<strong>SCI, JCR Q1, <span class="vvip badge">中科院2区</span>, <span class="vip">CCF C类国际期刊</span></strong></strong>) [<a href="https://www.sciencedirect.com/science/article/pii/S0167739X17302492">PDF</a>]
+			
+			<LI><strong>Weifeng Pan</strong>, Chunlai Chai. <a class="STYLE6" onMouseOver="ddrivetip('',500)" onMouseOut="hideddrivetip()" onClick="javascript:pageTracker._trackPageview('/outbound/article/www.plosone.org');" target="_blank">Measuring Software Stability based on Complex Networks in Software</a>. <strong><i>Cluster Computing</i></strong>, 2019, 22(2): s2589–s2598. (<strong>SCI, <span class="vvip badge">CCF C类国际期刊</span></strong>) [<a href="https://link.springer.com/journal/10586">PDF</a>]
+			
+			<LI><strong>Weifeng Pan</strong>, Haibo Jiang, Hua Ming, Chunlai Chai, Bi Chen, Hao Li. <a class="STYLE6" onMouseOver="ddrivetip('',500)" onMouseOut="hideddrivetip()" onClick="javascript:pageTracker._trackPageview('/outbound/article/www.plosone.org');" target="_blank">Characterizing software stability via change propagation simulation</a>. <strong><i>Complexity</i></strong>, 2019, 2019: 9414162. (<strong>SCI, <span class="vvip badge">中科院2区</span></strong>) [<a href="https://www.journals.elsevier.com/journal-of-computational-science/">PDF</a>] [<a href="https://www.icloud.com/iclouddrive/0sSM4U7GmxiTLpLfpp0kxcDsg#complexity9414162supp_2" target="_blank">Data & Code</a>]
+			
+			<LI><strong>Weifeng Pan</strong>, Jilei Dong, Kun Liu, Jing Wang. <a class="STYLE6" onMouseOver="ddrivetip('',500)" onMouseOut="hideddrivetip()" onClick="javascript:pageTracker._trackPageview('/outbound/article/www.plosone.org');" target="_blank">Topology and topic-aware service clustering</a>. <strong><i>International Journal of Web Services Research</i></strong>, 2018, 15(3): 18-37. (<strong>SCI, JCR Q4, <span class="vvip badge">服务计算领域著名期刊</span></strong>) [<a href="https://www.igi-global.com/article/topology-and-topic-aware-service-clustering/205609">PDF</a>]
+			
+			<LI><strong>Weifeng Pan</strong>, Bo Hu, Jilei Dong, Kun Liu, Bo Jiang. <a class="STYLE6" onMouseOver="ddrivetip('',500)" onMouseOut="hideddrivetip()" onClick="javascript:pageTracker._trackPageview('/outbound/article/www.plosone.org');" target="_blank">Structural properties of multilayer software networks: A case study in Tomcat</a>. <strong><i>Advances in Complex Systems</i></strong>, 2018, 21(02): 1850004, DOI: 10.1142/S0219525918500042.  (<strong>SCI, <span class="vvip badge">复杂网络领域著名期刊</span></strong>) [<a href="http://www.worldscientific.com/worldscinet/acs">PDF</a>]
+	     
+
+	
+
+	     
+	    </OL>
+		
+		 
+	</div>
+
+	<div id="sidebar">
+		<h3>Menu</h3>
+		<ul class="sidelink">
+			<li><a href="#pur">Papers under review</a></li>
+			<li><a href="#jp">Journal papers</a></li>			
+			<li><a href="#cp">Conference papers</a></li>
+			<li><a href="#ip">Invention Patents</a></li>
+			<li><a href="#sc">Software Copyrights</a></li>
+		</ul>		
+	</div>
+    
+	<div id="footer">
+		<strong>Mailing Address: </strong>SCIE Buiding, 18# Xuezheng Street, Hangzhou 310018, Zhejiang, China<BR>
+		<strong>2019 <a href="#">Weifeng Pan</a></strong> | Template design by <a href="http://andreasviklund.com/">andreasviklund.com</a>
+	</div>
+
+</div>
+</body>
+</html>
