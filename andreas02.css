@@ -78,7 +78,8 @@ ul.sidelink li a:hover {background:#e0e0e0 url(imgs/corner.gif) top right no-rep
 	.badge {
     display: inline-block;
     min-width: 10px;
-    padding: 3px 7px;
+    padding-left: -1px;
+    padding-right: 4px;
     font-size: 10px;
     font-weight: 700;
     line-height: 1;
