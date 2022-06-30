@@ -89,7 +89,7 @@ ul.sidelink li a:hover {background:#e0e0e0 url(imgs/corner.gif) top right no-rep
     vertical-align: baseline;
     background-color: #FFFFF0/*#E02723*/;
     border-radius: 10px;
-	letter-spacing: 1px;
+	letter-spacing: 0.5px;
 	}
 	
 	span.break {
