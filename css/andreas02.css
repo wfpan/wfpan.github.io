@@ -95,3 +95,16 @@ ul.sidelink li a:hover {background:#e0e0e0 url(../figures/corner.gif) top right 
 	span.break {
 		word-break:break-all;
 		}
+
+.developer {
+text-align:center;
+}
+
+.developer span {
+margin-bottom:10px;
+display:block;
+}
+
+.dev-tab td {
+padding-right: 15px;
+}

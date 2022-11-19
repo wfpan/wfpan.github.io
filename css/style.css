@@ -449,3 +449,29 @@ height:235;
 float:left;
 width:70%;
 }
+
+.vedio, .developer {
+float: left;
+}
+
+.developer {
+text-align:center;
+margin-left:35px;
+margin-top:-35px;
+}
+
+.developer span {
+margin-bottom:10px;
+display:block;
+}
+
+.dev-tab td {
+padding-right: 15px;
+}
+
+.tab-title {
+text-align: left;
+}
+
+
+.clear{clear:both;}
