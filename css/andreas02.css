@@ -40,7 +40,7 @@ li {margin:0 0 3px 0;}
 .activenavitab:hover {color:#fff; text-decoration:none;}
 
 /* Header description area repeat-y±³¾°*/
-#desc {background:#505050 url(../figures/wfpan.jpg) bottom right no-repeat; clear:both; color:#fff;  height:178px; margin:5px 0 15px; padding:0 0 5px 0;}
+#desc {background:#505050 url(../figures/wfpan-old.jpg) bottom right no-repeat; clear:both; color:#fff;  height:178px; margin:5px 0 15px; padding:0 0 5px 0;}
 #desc p {font-size:1em; line-height:1.3em; padding:0 0 0 15px; width:400px;}
 #desc h2 {color:#fff; padding:15px 15px 0;}
 #desc a {border-color:#fff; color:#fff; text-decoration:none;}
