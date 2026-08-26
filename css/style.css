@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-default {
 	border-color: transparent;
-  background-color: rgba(0, 0, 0, 0.5);
+  	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
@@ -138,6 +138,82 @@ h1, h2, h3, h4, h5, h6 {
 #new-paper-list li:nth-child(n+5) {
     display: none;
 }
+
+.publication-toggle-link {
+    display: inline-block;
+    color: #2563eb;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.95em;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+.publication-toggle-link:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* 原有列表过滤css
+#journal-pub-list.expand > li {
+    display: list-item;
+}
+ */
+#journal-pub-list.expand > li {
+    display: liste-item;
+}
+
+#conference-pub-list.expand > li {
+    display: liste-item;
+}
+
+/* ===== 桌面大屏 ≥768px：鼠标悬浮展开下拉 ===== */
+@media (min-width: 768px) {
+  .navbar-nav > li.dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+  /* 悬浮时父链接清除背景高亮，和其余导航条目外观一致 */
+  .navbar-nav > li.dropdown.active > a.dropdown-toggle {
+  	color: 	#1abc9c;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* ===== 手机端 <767px：子菜单直接缩进展开，无下拉弹窗 ===== */
+@media (max-width: 767px) {
+  .navbar-nav .dropdown .dropdown-menu {
+    display: block;
+    position: static;
+    float: none;
+    border: none;
+    box-shadow: none;
+    padding-left: 1em;
+    background: transparent;
+  }
+  .dropdown-menu > li > a {
+    color: 	#FFFFFF;
+	 background: transparent;
+  }
+}
+
+/* ===== 下拉菜单整体配色，对齐 navbar-default 风格 ===== */
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: none;
+
+}
+.dropdown-menu > li > a {
+	color: 	#FFFFFF;
+}
+/* 子项鼠标悬浮：和导航栏菜单hover颜色完全一样 */
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+	color: 	#1abc9c;
+	background: transparent;
+}
+
+
+
+/**/
+
 
 #headerwrap h1 {
 	color:#ffffff;
