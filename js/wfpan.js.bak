@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const allLinks = document.querySelectorAll('a');
     allLinks.forEach(link => {
         // 判断：该链接是否在 .main-menu 菜单容器里面
-        const isInMenu = link.closest('.container');
+        const isInMenu = link.closest('.main-menu');
         if (!isInMenu) {
             // 不在菜单栏：新标签打开
             link.target = '_blank';
