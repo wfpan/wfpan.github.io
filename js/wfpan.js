@@ -41,11 +41,22 @@ document.addEventListener('DOMContentLoaded', function () {
             li.style.display = "none";
         }
     });
+	
+	// 统计期刊列表被隐藏条数
+    const hiddenJournalCount = ol.querySelectorAll(':scope > li[data-non-ccfa="1"]').length;
+	
+	// ==========新增：页面首次加载，设置按钮初始文本==========
+    if(hiddenJournalCount > 0){
+        btn.innerText = `Show More (+${hiddenJournalCount})`;
+    }else{
+        btn.innerText = "Show More";
+    }
 
     btn.addEventListener("click", function () {
         ol.classList.toggle("expand");
         const expanded = ol.classList.contains("expand");
-        btn.innerText = expanded ? "Show Less..." : "Show More...";
+       // btn.innerText = expanded ? "Show Less..." : "Show More...";
+		btn.innerText = expanded ? `Show Less (-${hiddenJournalCount})` : `Show More (+${hiddenJournalCount})`;
 
         ol.querySelectorAll(':scope > li[data-non-ccfa="1"]').forEach(li => {
             li.style.display = expanded ? "list-item" : "none";
@@ -69,11 +80,19 @@ document.addEventListener('DOMContentLoaded', function () {
             cli.style.display = "none";
         }
     });	
+	// 统计会议列表被隐藏条数
+    const hiddenConfCount = conferenceol.querySelectorAll(':scope > li[data-non-ccfa="1"]').length;
+	if(hiddenConfCount > 0){
+        conferencebtn.innerText = `Show More (+${hiddenConfCount})`;
+    }else{
+        conferencebtn.innerText = "Show More";
+    }
 	
 	conferencebtn.addEventListener("click", function () {
         conferenceol.classList.toggle("expand");
         const expanded = conferenceol.classList.contains("expand");
-        conferencebtn.innerText = expanded ? "Show Less..." : "Show More...";
+       // conferencebtn.innerText = expanded ? "Show Less..." : "Show More...";
+		conferencebtn.innerText = expanded ? `Show Less (-${hiddenConfCount})` : `Show More (+${hiddenConfCount})`;
 
         conferenceol.querySelectorAll(':scope > li[data-non-ccfa="1"]').forEach(li => {
             li.style.display = expanded ? "list-item" : "none";
