@@ -29,8 +29,28 @@ function copyBibTex(event) {
     });
 }
 
+
 document.addEventListener('DOMContentLoaded', function () {
 	renderEmail();
+	
+	function countCCF(sel){
+        const els = document.querySelectorAll(`${sel} li .CCFRank.badge`);
+        let A=0,B=0,C=0;
+        els.forEach(b=>{
+            const t=b.textContent.trim();
+            if(t==="CCF A")A++;
+            if(t==="CCF B")B++;
+            if(t==="CCF C")C++;
+        })
+        return {A,B,C};
+    }
+    const j = countCCF('#journal-pub-list');
+    const c = countCCF('#conference-pub-list');
+    const totalA = j.A + c.A;
+    const totalB = j.B + c.B;
+    const totalC = j.C + c.C;
+    const span = document.getElementById('publication-statistics-id');
+    span.textContent = `CCF A: ${totalA} | CCF B: ${totalB} | CCF C: ${totalC}`;
 	
 	// ----全局链接处理：所有a标签，菜单内除外，全部新开窗口----
     const allLinks = document.querySelectorAll('a');

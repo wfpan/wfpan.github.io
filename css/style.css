@@ -9,7 +9,6 @@
    Base Styles, Bootstrap Modifications & Fonts Import
    ========================================================================== */
 
-
 ::-moz-selection {
     background: #f2c2c9;
     color: #a4003a;
@@ -57,7 +56,7 @@ body {
     font-family: 'Georgia', 'Helvetica Neue', 'Helvetica', 'Microsoft Yahei', 'Arial', sans-serif;/*'Montserrat', sans-serif;*/
 	/*"Helvetica Neue", Helvetica, Arial, sans-serif*/
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px; /*16px是标准的*/
     /*margin: 80px 30px 80px 30px;*/
 	margin:80px auto;
 
@@ -148,6 +147,22 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     transition: color 0.2s ease;
 }
+
+
+.publication-statistics {
+    display: inline-block;
+    color: #4a5568;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.95em;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+.publication-statistics:hover {
+    color: #2b6cb0;
+}
+
+
 .publication-toggle-link:hover {
     color: #1d4ed8;
     text-decoration: underline;
