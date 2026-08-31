@@ -53,7 +53,7 @@
 
 
 body {
-	width:70%; /*²¼¾ÖµÄ·¶Î§Ð¡Ò»µã*/
+	width:69%; /*²¼¾ÖµÄ·¶Î§Ð¡Ò»µã*/
     font-family: 'Georgia', 'Helvetica Neue', 'Helvetica', 'Microsoft Yahei', 'Arial', sans-serif;/*'Montserrat', sans-serif;*/
 	/*"Helvetica Neue", Helvetica, Arial, sans-serif*/
     font-weight: 400;
@@ -210,7 +210,25 @@ h1, h2, h3, h4, h5, h6 {
 	background: transparent;
 }
 
+/**/
+/* 按钮基础样式 */
+.bibtex-btn {
+    cursor: pointer;
+    color: #337ab7; /* 蓝色 */
+    /*text-decoration: underline;*/
+    transition: all 0.3s ease; /* 平滑过渡效果 */
+}
 
+/* 悬停时的效果 */
+.bibtex-btn:hover {
+    color: #0056b3; /* 深蓝色 */
+}
+
+/* 复制成功后的状态 */
+.bibtex-btn.copied {
+    color: #dc3545 !important; /* 绿色 */
+    text-decoration: none; /* 去掉下划线 */
+}
 
 /**/
 
@@ -521,15 +539,44 @@ color:rgb(209, 36, 13);
 font-weight: 600;
 }
 
+/*******************/
+
+/*
 .photo{
 float:left;
 margin-right: 20px;
 height:235;
 }
+
 .intro{
 float:left;
 width:70%;
 }
+*/
+
+.golf {
+  display: flex;
+  flex-direction: row; /* 反转：photo在右，intro文字在左 */
+  gap: 30px; /* 文字和照片之间距离，调这个数字改间距 */
+  align-items: flex-start; /* 顶部对齐，不要拉伸 */
+  max-width: 720px; /*关键：限制整个模块最大宽度，照片就不会跑到浏览器最右边！调这个！ */
+}
+.photo {
+  /* 删除float全部属性 */
+ /* height:235px;*/
+ flex-shrink: 0;
+}
+
+.photo img {
+  height: 250px;  /* 修改这里！控制照片高度，数字调小图片就变小，例如200、210、220 */
+  width: auto;    /* 宽度自动，保证图片不变形 */
+  object-fit: contain;
+}
+.intro {
+  flex: 1; /* 文字部分占剩余可用宽度 */
+}
+
+/****************/
 
 .vedio, .developer {
 float: left;

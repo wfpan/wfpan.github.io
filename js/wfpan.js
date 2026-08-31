@@ -8,6 +8,27 @@ function renderEmail() {
     }
 }
 
+function copyBibTex(event) {
+    const btn = event.currentTarget; // 获取当前点击的按钮
+    const bibText = btn.getAttribute('data-bibtex');
+    const originalText = btn.innerText;
+
+    navigator.clipboard.writeText(bibText).then(() => {
+        // 复制成功：添加 CSS 类名并修改文字
+        btn.classList.add('copied');
+        btn.innerText = 'Copied!';
+        
+        // 2秒后恢复原状
+        setTimeout(() => {
+            btn.classList.remove('copied');
+            btn.innerText = originalText;
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy BibTeX: ', err);
+        alert('复制失败，请手动复制。');
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
 	renderEmail();
 	
