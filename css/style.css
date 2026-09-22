@@ -572,9 +572,11 @@ width:70%;
 .golf {
   display: flex;
   flex-direction: row; /* 反转：photo在右，intro文字在左 */
+  flex-wrap: wrap; /* ✅ 新增：空间不足自动换行 */
   gap: 30px; /* 文字和照片之间距离，调这个数字改间距 */
   align-items: flex-start; /* 顶部对齐，不要拉伸 */
   max-width: 720px; /*关键：限制整个模块最大宽度，照片就不会跑到浏览器最右边！调这个！ */
+  width: 100%; /* ✅ 新增：小屏幕下容器占满父级宽度 */
 }
 .photo {
   /* 删除float全部属性 */
@@ -586,9 +588,11 @@ width:70%;
   height: 250px;  /* 修改这里！控制照片高度，数字调小图片就变小，例如200、210、220 */
   width: auto;    /* 宽度自动，保证图片不变形 */
   object-fit: contain;
+  max-width: 100%; /* ✅ 新增：图片不会超出容器，小屏自动缩小 */
 }
 .intro {
   flex: 1; /* 文字部分占剩余可用宽度 */
+  min-width: 280px; /* ✅ 关键：文字最小宽度，小于这个宽度就触发换行，可按需调整 */
 }
 
 /****************/
