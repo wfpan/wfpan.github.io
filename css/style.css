@@ -168,12 +168,6 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: underline;
 }
 
-#journal-pub-list > li:not(:has(.CCFRank:contains("CCF A"))) {
-  display: none;
-}
-#conference-pub-list > li:not(:has(.CCFRank:contains("CCF A"))) {
-  display: none;
-}
 
 /* 原有列表过滤css
 #journal-pub-list.expand > li {

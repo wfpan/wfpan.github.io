@@ -8,6 +8,7 @@ function renderEmail() {
     }
 }
 
+
 function copyBibTex(event) {
     const btn = event.currentTarget; // 获取当前点击的按钮
     const bibText = btn.getAttribute('data-bibtex');
@@ -32,7 +33,7 @@ function copyBibTex(event) {
 
 document.addEventListener('DOMContentLoaded', function () {
 	renderEmail();
-	
+		
 	function countCCF(sel){
         const els = document.querySelectorAll(`${sel} li .CCFRank.badge`);
         let A=0,B=0,C=0;
